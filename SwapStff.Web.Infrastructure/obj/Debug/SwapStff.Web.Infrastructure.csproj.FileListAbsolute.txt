@@ -1,0 +1,47 @@
+E:\Bharat\Projects\SwapStff_New\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Web.Infrastructure.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Web.Infrastructure.pdb
+E:\Bharat\Projects\SwapStff_New\SwapStff.Web.Infrastructure\bin\Debug\EntityFramework.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Core.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Data.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Entity.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Service.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff.Web.Infrastructure\bin\Debug\EntityFramework.xml
+E:\Bharat\Projects\SwapStff_New\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Core.pdb
+E:\Bharat\Projects\SwapStff_New\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Data.pdb
+E:\Bharat\Projects\SwapStff_New\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Entity.pdb
+E:\Bharat\Projects\SwapStff_New\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Service.pdb
+E:\Bharat\Projects\SwapStff_New\SwapStff.Web.Infrastructure\obj\Debug\SwapStff.Web.Infrastructure.csprojResolveAssemblyReference.cache
+E:\Bharat\Projects\SwapStff_New\SwapStff.Web.Infrastructure\obj\Debug\SwapStff.Web.Infrastructure.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff.Web.Infrastructure\obj\Debug\SwapStff.Web.Infrastructure.pdb
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Web.Infrastructure.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Web.Infrastructure.pdb
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\EntityFramework.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Core.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Data.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Entity.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Service.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\EntityFramework.xml
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Core.pdb
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Data.pdb
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Entity.pdb
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Service.pdb
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Web.Infrastructure\obj\Debug\SwapStff.Web.Infrastructure.csprojResolveAssemblyReference.cache
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Web.Infrastructure\obj\Debug\SwapStff.Web.Infrastructure.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Web.Infrastructure\obj\Debug\SwapStff.Web.Infrastructure.pdb
+E:\Bharat\Projects\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Web.Infrastructure.dll
+E:\Bharat\Projects\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Web.Infrastructure.pdb
+E:\Bharat\Projects\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\EntityFramework.dll
+E:\Bharat\Projects\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+E:\Bharat\Projects\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Core.dll
+E:\Bharat\Projects\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Data.dll
+E:\Bharat\Projects\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Entity.dll
+E:\Bharat\Projects\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Service.dll
+E:\Bharat\Projects\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\EntityFramework.xml
+E:\Bharat\Projects\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+E:\Bharat\Projects\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Core.pdb
+E:\Bharat\Projects\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Data.pdb
+E:\Bharat\Projects\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Entity.pdb
+E:\Bharat\Projects\WebAPI\SwapStff.Web.Infrastructure\bin\Debug\SwapStff.Service.pdb
+E:\Bharat\Projects\WebAPI\SwapStff.Web.Infrastructure\obj\Debug\SwapStff.Web.Infrastructure.csprojResolveAssemblyReference.cache
+E:\Bharat\Projects\WebAPI\SwapStff.Web.Infrastructure\obj\Debug\SwapStff.Web.Infrastructure.dll
+E:\Bharat\Projects\WebAPI\SwapStff.Web.Infrastructure\obj\Debug\SwapStff.Web.Infrastructure.pdb

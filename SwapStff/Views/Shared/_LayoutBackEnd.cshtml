@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - Swapstff</title>
+    @*@Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")*@
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+    <!-- Favicon -->
+    @*<link rel="shortcut icon" href="~/assets/images/favicon.ico" />*@
+    
+    <!-- WEB FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="~/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/sky-forms.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/weather-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/line-icons.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/flexslider.css" rel="stylesheet" type="text/css" />
+
+    <!-- REVOLUTION SLIDER -->
+    <link href="~/assets/css/revolution-slider.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/layerslider.css" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+    <link href="~/assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/header-default.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/footer-default.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
+    <!--<link href="assets/css/layout-dark.css" rel="stylesheet" type="text/css"  />-->
+    <!-- Morenizr -->
+    <script type="text/javascript" src="~/assets/plugins/modernizr.min.js"></script>
+
+    <!--[if lte IE 8]>
+        <script src="assets/plugins/respond.js"></script>
+    <![endif]-->
+
+</head>
+<body class="smoothscroll">
+    <div id="wrapper">
+
+        <div id="header">
+            <!-- class="sticky" for sticky menu -->
+            <!-- Top Bar -->
+            <header id="topBar">
+                <div class="container">
+
+                    <div class="pull-right fsize13 margin-top10 hide_mobile">
+                        
+                        @{
+                            
+                            if (@HttpContext.Current.Session["Username"] == null)
+                            { 
+                                @Html.Action("Index","Home")
+                            }
+
+                        }
+                        Welcome, @HttpContext.Current.Session["Username"].ToString()
+                        |
+                        <a href="#" onclick="location.href='@Url.Action("Index", "Login")'">Log Out</a>
+                   
+                    </div>
+
+                    <!-- Logo -->
+                    <a class="logo bg-danger" href="#"  onclick="location.href='@Url.Action("Index", "Home")'">
+                        <img src="~/assets/images/logo.png" height="50" alt="Swapstff" />
+                    </a>
+
+                </div><!-- /.container -->
+            </header>
+            <!-- /Top Bar -->
+            <!-- Top Nav -->
+            <header id="topNav">
+                <div class="container">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Search -->
+                    @*<form class="search" method="get" action="search.html">
+                        <input type="text" class="form-control" name="s" value="" placeholder="Search">
+                        <button class="fa fa-search"></button>
+                    </form>*@
+                    <!-- /Search -->
+
+                    <!-- Top Nav -->
+                    <div class="navbar-collapse nav-main-collapse collapse">
+                        <nav class="nav-main">
+                            <ul id="topMain" class="nav nav-pills nav-main menu_color">
+                                <li>
+                                    <a href="#" onclick="location.href='@Url.Action("Index", "UserProfiles")'">Profiles<span>&nbsp;</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="location.href='@Url.Action("Index", "UserItems")'">Items<span>&nbsp;</span></a>
+                                </li>
+                                
+                            </ul>
+
+                        </nav>
+                    </div>
+                    <!-- /Top Nav -->
+
+                </div><!-- /.container -->
+            </header>
+            <!-- /Top Nav -->
+
+        </div>
+        <div id="body">
+            @RenderBody()
+        </div>
+    
+        <!-- FOOTER -->
+        <footer id="footer">
+            <div class="copyright">
+                <div class="container text-center fsize12">
+                    <a href="#" target="_blank" title="All Right Reserved &copy; Swapstff" class="copyright">All Right Reserved &copy; Swapstff ©2014 &nbsp;</a> 
+                </div>
+            </div>
+        </footer>
+        <!-- /FOOTER -->
+
+        <a href="#" id="toTop"></a>
+
+    </div><!-- /#wrapper -->
+    <!-- JAVASCRIPT FILES -->
+    <script type="text/javascript" src="~/assets/plugins/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="~/assets/plugins/jquery.isotope.js"></script>
+    <script type="text/javascript" src="~/assets/plugins/masonry.js"></script>
+
+    <script type="text/javascript" src="~/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="~/assets/plugins/knob/js/jquery.knob.js"></script>
+    
+    <!-- REVOLUTION SLIDER -->
+    <script type="text/javascript" src="~/assets/js/revolution_slider.js"></script>
+
+
+    <script type="text/javascript" src="~/assets/js/scripts.js"></script>
+    @*<script type="text/javascript" src="assets/plugins/styleswitcher/styleswitcher.js">        /** REMOVE ON PRODUCTION **/</script>*@
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

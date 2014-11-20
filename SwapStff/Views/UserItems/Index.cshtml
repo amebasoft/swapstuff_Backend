@@ -1,0 +1,69 @@
+﻿@model IEnumerable<SwapStff.Models.ItemModel>
+
+@{
+    ViewBag.Title = "User Items";
+    Layout = "~/Views/Shared/_LayoutBackEnd.cshtml";
+}
+
+<h2>User Items</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfileID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemDateTimeCreated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    
+    var imgSrc = String.Format("data:image/gif;base64,{0}", item.ItemImage);
+
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProfileID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemDescription)
+        </td>
+        <td>
+            <img src="@imgSrc" width="50" height="50" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemDateTimeCreated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

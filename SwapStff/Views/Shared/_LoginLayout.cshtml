@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - Swapstff</title>
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/assets/images/Ameba/favicon.ico" />
+
+    <!-- WEB FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="~/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/sky-forms.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/weather-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/line-icons.css" rel="stylesheet" type="text/css" />
+    
+    <link href="~/assets/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/flexslider.css" rel="stylesheet" type="text/css" />
+
+    <!-- REVOLUTION SLIDER -->
+    <link href="~/assets/css/revolution-slider.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/layerslider.css" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+    <link href="~/assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/header-default.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/footer-default.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+    <!-- Morenizr -->
+    <script type="text/javascript" src="~/assets/plugins/modernizr.min.js"></script>
+
+    <!--[if lte IE 8]>
+        <script src="assets/plugins/respond.js"></script>
+    <![endif]-->
+</head>
+<!--
+    Available body classes:
+        smoothscroll			= enable chrome browser smooth scroll
+        grey 					= grey content background
+        boxed 					= boxed style
+        pattern1 ... pattern10 	= background pattern
+
+    Background Image - add to body:
+        data-background="assets/images/boxed_background/1.jpg"
+-->
+
+<body class="smoothscroll">
+    <div id="wrapper">
+
+        <!-- CONTENT -->
+        @RenderBody()
+        <!-- /CONTENT -->
+        <!-- FOOTER -->
+        <footer id="footer">
+            <div class="copyright">
+                <div class="container text-center fsize12">
+                    All Right Reserved &copy; Swapstff ©2014  &nbsp;
+                    @*<a href="#" class="fsize11">Privacy Policy</a> &bull;
+                    <a href="#" class="fsize11">Terms of Service</a>*@
+                </div>
+            </div>
+        </footer>
+        <!-- /FOOTER -->
+    </div><!-- /#wrapper -->
+    <!-- JAVASCRIPT FILES -->
+    <script type="text/javascript" src="~/assets/plugins/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="~/assets/plugins/jquery.isotope.js"></script>
+    <script type="text/javascript" src="~/assets/plugins/masonry.js"></script>
+
+    <script type="text/javascript" src="~/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="~/assets/plugins/knob/js/jquery.knob.js"></script>
+    
+    <!-- REVOLUTION SLIDER -->
+    <script type="text/javascript" src="~/assets/js/revolution_slider.js"></script>
+    <script type="text/javascript" src="~/assets/js/scripts.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

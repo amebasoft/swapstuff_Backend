@@ -1,0 +1,173 @@
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\SwapStff.dll.config
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\SwapStff.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\SwapStff.pdb
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\Antlr3.Runtime.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\Microsoft.Web.Infrastructure.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\Newtonsoft.Json.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Net.Http.Formatting.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.Helpers.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.Http.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.Http.WebHost.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.Mvc.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.Optimization.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.Razor.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.WebPages.Deployment.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.WebPages.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.WebPages.Razor.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\WebGrease.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\Newtonsoft.Json.xml
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Net.Http.Formatting.xml
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.Helpers.xml
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.Http.xml
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.Http.WebHost.xml
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.Mvc.xml
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.Optimization.xml
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.Razor.xml
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.WebPages.xml
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.WebPages.Deployment.xml
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\System.Web.WebPages.Razor.xml
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\Antlr3.Runtime.pdb
+E:\Bharat\Projects\SwapStff_New\SwapStff\obj\Debug\SwapStff.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\obj\Debug\SwapStff.pdb
+E:\Bharat\Projects\SwapStff_New\SwapStff\obj\Debug\SwapStff.csprojResolveAssemblyReference.cache
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\SwapStff.Core.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\SwapStff.Data.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\SwapStff.Entity.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\SwapStff.Service.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\SwapStff.Web.Infrastructure.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\EntityFramework.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\SwapStff.Core.pdb
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\SwapStff.Data.pdb
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\SwapStff.Entity.pdb
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\SwapStff.Service.pdb
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\SwapStff.Web.Infrastructure.pdb
+E:\Bharat\Projects\SwapStff_New\SwapStff\bin\EntityFramework.xml
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\SwapStff.dll.config
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\SwapStff.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\SwapStff.pdb
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\Antlr3.Runtime.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\Newtonsoft.Json.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\SwapStff.Core.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\SwapStff.Data.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\SwapStff.Entity.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\SwapStff.Service.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\SwapStff.Web.Infrastructure.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Net.Http.Formatting.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.Helpers.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.Http.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.Http.WebHost.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.Mvc.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.Optimization.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.Razor.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.WebPages.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.WebPages.Razor.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\WebGrease.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\EntityFramework.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\SwapStff.Core.pdb
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\SwapStff.Data.pdb
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\SwapStff.Entity.pdb
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\SwapStff.Service.pdb
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\SwapStff.Web.Infrastructure.pdb
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\Newtonsoft.Json.xml
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Net.Http.Formatting.xml
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.Helpers.xml
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.Http.xml
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.Http.WebHost.xml
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.Mvc.xml
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.Optimization.xml
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.Razor.xml
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.WebPages.xml
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\System.Web.WebPages.Razor.xml
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\Antlr3.Runtime.pdb
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\bin\EntityFramework.xml
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\obj\Debug\SwapStff.csprojResolveAssemblyReference.cache
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\obj\Debug\SwapStff.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff\obj\Debug\SwapStff.pdb
+E:\Bharat\Projects\WebAPI\SwapStff\bin\AutoMapper.Net4.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\SwapStff.dll.config
+E:\Bharat\Projects\WebAPI\SwapStff\bin\SwapStff.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\SwapStff.pdb
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Antlr3.Runtime.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\AutoMapper.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\EntityFramework.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\EntityFramework.SqlServer.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.Security.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.Security.Google.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Practices.ServiceLocation.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Web.Infrastructure.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Newtonsoft.Json.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Ninject.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Ninject.Web.Common.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Ninject.Web.Mvc.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Ninject.WebApi.DependencyResolver.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Owin.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\SwapStff.Core.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\SwapStff.Data.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\SwapStff.Entity.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\SwapStff.Service.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\SwapStff.Web.Infrastructure.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Net.Http.Formatting.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.Helpers.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.Http.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.Http.WebHost.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.Mvc.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.Optimization.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.Razor.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.WebPages.Deployment.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.WebPages.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.WebPages.Razor.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\WebActivatorEx.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\WebGrease.dll
+E:\Bharat\Projects\WebAPI\SwapStff\bin\AutoMapper.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\EntityFramework.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\EntityFramework.SqlServer.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.Security.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.Security.Google.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Practices.ServiceLocation.pdb
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Microsoft.Practices.ServiceLocation.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Newtonsoft.Json.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Ninject.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Ninject.Web.Common.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Ninject.Web.Mvc.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\SwapStff.Core.pdb
+E:\Bharat\Projects\WebAPI\SwapStff\bin\SwapStff.Data.pdb
+E:\Bharat\Projects\WebAPI\SwapStff\bin\SwapStff.Entity.pdb
+E:\Bharat\Projects\WebAPI\SwapStff\bin\SwapStff.Service.pdb
+E:\Bharat\Projects\WebAPI\SwapStff\bin\SwapStff.Web.Infrastructure.pdb
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Net.Http.Formatting.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.Helpers.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.Http.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.Http.WebHost.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.Mvc.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.Razor.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.WebPages.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.WebPages.Deployment.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.WebPages.Razor.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\System.Web.Optimization.xml
+E:\Bharat\Projects\WebAPI\SwapStff\bin\Antlr3.Runtime.pdb
+E:\Bharat\Projects\WebAPI\SwapStff\obj\Debug\SwapStff.csprojResolveAssemblyReference.cache
+E:\Bharat\Projects\WebAPI\SwapStff\obj\Debug\SwapStff.dll
+E:\Bharat\Projects\WebAPI\SwapStff\obj\Debug\SwapStff.pdb

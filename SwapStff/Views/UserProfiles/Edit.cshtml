@@ -1,0 +1,73 @@
+﻿@model SwapStff.Models.ProfileModel
+
+@{
+    ViewBag.Title = "User Profile";
+    Layout = "~/Views/Shared/_LayoutBackEnd.cshtml";
+}
+
+<h2 class="text-center">User Profile</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProfileId, new { @class = "control-label col-md-2" })
+            <div class="col-md-10 disabled">
+                @Html.TextBoxFor(model => model.ProfileId, new {@readonly="true" })
+                @Html.ValidationMessageFor(model => model.ProfileId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Username, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Username)
+                @Html.ValidationMessageFor(model => model.Username)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Latitude, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Latitude)
+                @Html.ValidationMessageFor(model => model.Latitude)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Longitude, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Longitude)
+                @Html.ValidationMessageFor(model => model.Longitude)
+            </div>
+        </div>
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.DateTimeCreated, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DateTimeCreated)
+                @Html.ValidationMessageFor(model => model.DateTimeCreated)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Distance, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Distance)
+                @Html.ValidationMessageFor(model => model.Distance)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Update" class="bigButton" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

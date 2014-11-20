@@ -1,0 +1,21 @@
+E:\Bharat\Projects\SwapStff_New\SwapStff.Core\bin\Debug\SwapStff.Core.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff.Core\bin\Debug\SwapStff.Core.pdb
+E:\Bharat\Projects\SwapStff_New\SwapStff.Core\bin\Debug\SwapStff.Entity.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff.Core\bin\Debug\SwapStff.Entity.pdb
+E:\Bharat\Projects\SwapStff_New\SwapStff.Core\obj\Debug\SwapStff.Core.csprojResolveAssemblyReference.cache
+E:\Bharat\Projects\SwapStff_New\SwapStff.Core\obj\Debug\SwapStff.Core.dll
+E:\Bharat\Projects\SwapStff_New\SwapStff.Core\obj\Debug\SwapStff.Core.pdb
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Core\bin\Debug\SwapStff.Core.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Core\bin\Debug\SwapStff.Core.pdb
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Core\bin\Debug\SwapStff.Entity.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Core\bin\Debug\SwapStff.Entity.pdb
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Core\obj\Debug\SwapStff.Core.csprojResolveAssemblyReference.cache
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Core\obj\Debug\SwapStff.Core.dll
+C:\Users\Lior Rutenberg\Documents\Visual Studio 2013\Projects\Project1\WebAPI\SwapStff.Core\obj\Debug\SwapStff.Core.pdb
+E:\Bharat\Projects\WebAPI\SwapStff.Core\bin\Debug\SwapStff.Core.dll
+E:\Bharat\Projects\WebAPI\SwapStff.Core\bin\Debug\SwapStff.Core.pdb
+E:\Bharat\Projects\WebAPI\SwapStff.Core\bin\Debug\SwapStff.Entity.dll
+E:\Bharat\Projects\WebAPI\SwapStff.Core\bin\Debug\SwapStff.Entity.pdb
+E:\Bharat\Projects\WebAPI\SwapStff.Core\obj\Debug\SwapStff.Core.csprojResolveAssemblyReference.cache
+E:\Bharat\Projects\WebAPI\SwapStff.Core\obj\Debug\SwapStff.Core.dll
+E:\Bharat\Projects\WebAPI\SwapStff.Core\obj\Debug\SwapStff.Core.pdb

@@ -141,6 +141,8 @@ namespace SwapStff.Controllers
                 if (Item != null)
                 {
                     Itemservice.Delete(Item);
+                    //Delete Image from Blob
+                    DeleteImageFromBlob(Item.ItemID.ToString());
                 }
 
                 //Delete from profile, It will delete from Items, Chat & Profiles
@@ -167,6 +169,29 @@ namespace SwapStff.Controllers
             Mapper.CreateMap<SwapStff.Entity.Item, SwapStff.Models.ItemModel>();
             SwapStff.Models.ItemModel ItemModel = Mapper.Map<SwapStff.Entity.Item, SwapStff.Models.ItemModel>(Item);
             return Json(ItemModel);
+        }
+        public Boolean DeleteImageFromBlob(string ItemID)
+        {
+            Boolean Status = false;
+            try
+            {
+                //Delete the Existing Item
+                var ItemDel = Itemservice.GetById(ItemID.ToString());
+
+                if (ItemDel.ItemImage != "")
+                {
+                    //Delete Image from Blob
+                    BlobCloudService objBlob = new BlobCloudService();
+                    objBlob.DeleteImageFromBlob(ItemDel.ItemImage);
+                }
+
+                Status = true;
+            }
+            catch
+            {
+                Status = false;
+            }
+            return Status;
         }
     }
 }

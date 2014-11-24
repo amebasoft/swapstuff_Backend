@@ -1,10 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
+using System.Drawing;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using AutoMapper;
+
+using Microsoft.WindowsAzure;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Auth;
+using Microsoft.WindowsAzure.Storage.Blob;
+
 
 using SwapStff.Models;
 using SwapStff.Service;
@@ -111,6 +119,18 @@ namespace SwapStff.Controllers
             string ItemID = "-1";
             try
             {
+                //Generate URL for Image
+                // Convert Base64 String to byte[]
+                byte[] imageBytes = Convert.FromBase64String(ItemModel.ItemImage);
+                string uniqueBlobName = string.Format("image_{0}{1}", Guid.NewGuid().ToString(), ".jpg");
+                //End : Generate URL for Image
+
+                //Set URL for Image to Blank
+                //I will update later after Successfully updation DB
+                ItemModel.ItemImage = "";
+                //End : Set URL for Image to Blank
+               
+
                 Mapper.CreateMap<SwapStff.Models.ItemModel, SwapStff.Entity.Item>();
                 SwapStff.Entity.Item Item = Mapper.Map<SwapStff.Models.ItemModel, SwapStff.Entity.Item>(ItemModel);
                 if (ItemModel.ItemID <= 0)
@@ -123,7 +143,12 @@ namespace SwapStff.Controllers
                     {
                         //Delete the Existing Item
                         var ItemDel = Itemservice.GetById(ItemModel.ItemID.ToString());
+                        //Delete Record from DB
                         Itemservice.Delete(ItemDel);
+                        //Delete Image from Blob
+                        DeleteImageFromBlob(ItemModel.ItemID.ToString());
+                        //End : Delete the Existing Item
+
                         //Insert the New item
                         Itemservice.Insert(Item); //Save Operation
                     }
@@ -131,9 +156,23 @@ namespace SwapStff.Controllers
                     {
                         Itemservice.Update(Item); //Update Operation
                     }
-                    
                 }
                 ItemID = Item.ItemID.ToString();
+
+                if (Convert.ToInt32(ItemID) > 0) //Operation Performed on it
+                {
+                    //Delete Image from Blob
+                    DeleteImageFromBlob(ItemID.ToString());
+                    BlobCloudService objBlob = new BlobCloudService();
+                    string URL = objBlob.UploadBlobImage(uniqueBlobName, imageBytes);
+                    
+                    //Update the Existing Item URL
+                    var ItemUpdate = Itemservice.GetById(ItemID.ToString());
+                    ItemUpdate.ItemImage = URL;
+
+                    Itemservice.Update(ItemUpdate);
+                }
+                
 
                 return Request.CreateResponse(HttpStatusCode.OK, ItemID, Configuration.Formatters.JsonFormatter);
             }
@@ -143,7 +182,31 @@ namespace SwapStff.Controllers
                 return Request.CreateResponse(HttpStatusCode.NotImplemented, ItemID.ToString(), Configuration.Formatters.JsonFormatter);
             }
         }
+        public Boolean DeleteImageFromBlob(string ItemID)
+        {
+            Boolean Status = false;
+            try
+            {
+                //Delete the Existing Item
+                var ItemDel = Itemservice.GetById(ItemID.ToString());
 
+                if (ItemDel.ItemImage != "")
+                {
+                    //Delete Image from Blob
+                    BlobCloudService objBlob = new BlobCloudService();
+                    objBlob.DeleteImageFromBlob(ItemDel.ItemImage);
+                }
+              
+                Status = true;
+            }
+            catch
+            {
+                Status = false;
+            }
+            return Status;
+        }
+       
+       
         // DELETE api/Items/5
         //http://swapstff.com/Items/DeleteItem/1
         [Route("DeleteItem/{ItemId}")]
@@ -154,6 +217,9 @@ namespace SwapStff.Controllers
             {
                 var Item = Itemservice.GetById(ItemId.ToString());
                 Itemservice.Delete(Item);
+                //Delete Image from Blob
+                DeleteImageFromBlob(ItemId.ToString());
+
                 return Request.CreateResponse(HttpStatusCode.OK, "SUCCESS", Configuration.Formatters.JsonFormatter);
             }
             catch(Exception ex)

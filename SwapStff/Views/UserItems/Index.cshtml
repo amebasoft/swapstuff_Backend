@@ -35,8 +35,6 @@
 
 @foreach (var item in Model) {
     
-    var imgSrc = String.Format("data:image/gif;base64,{0}", item.ItemImage);
-
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.ItemID)
@@ -51,7 +49,7 @@
             @Html.DisplayFor(modelItem => item.ItemDescription)
         </td>
         <td>
-            <img src="@imgSrc" width="50" height="50" />
+            <img src="@item.ItemImage" width="50" height="50" />
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ItemDateTimeCreated)

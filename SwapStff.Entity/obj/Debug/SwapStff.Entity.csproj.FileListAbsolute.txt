@@ -11,4 +11,3 @@ E:\Bharat\Projects\WebAPI\SwapStff.Entity\bin\Debug\SwapStff.Entity.dll
 E:\Bharat\Projects\WebAPI\SwapStff.Entity\bin\Debug\SwapStff.Entity.pdb
 E:\Bharat\Projects\WebAPI\SwapStff.Entity\obj\Debug\SwapStff.Entity.dll
 E:\Bharat\Projects\WebAPI\SwapStff.Entity\obj\Debug\SwapStff.Entity.pdb
-E:\Bharat\Projects\WebAPI\SwapStff.Entity\obj\Debug\SwapStff.Entity.csprojResolveAssemblyReference.cache

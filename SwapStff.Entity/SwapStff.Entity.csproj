@@ -42,8 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppSetting.cs" />
     <Compile Include="BaseEntity.cs" />
     <Compile Include="Chat.cs" />
+    <Compile Include="ErrorExceptionLogs.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemMatch.cs" />

@@ -73,6 +73,8 @@ namespace SwapStff.App_Start
 
             kernel.Bind<IDbContext>().To<DataContext>().InSingletonScope().WithConstructorArgument("connection", cs);
             kernel.Bind(typeof(IRepository<>)).To(typeof(RepositoryService<>));
+            kernel.Bind<IErrorExceptionLogService>().To<ErrorExceptionLogService>();
+            kernel.Bind<IAppSettingService>().To<AppSettingService>();
             kernel.Bind<IUserService>().To<UserService>();
             kernel.Bind<IProfileService>().To<ProfileService>();
             kernel.Bind<IItemService>().To<ItemService>();

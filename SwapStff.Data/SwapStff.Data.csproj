@@ -53,7 +53,9 @@
     <Compile Include="DataContext.cs" />
     <Compile Include="DbInitializer\DataBaseInitializer.cs" />
     <Compile Include="IDbContext.cs" />
+    <Compile Include="Mapping\AppSettingMap.cs" />
     <Compile Include="Mapping\ChatMap.cs" />
+    <Compile Include="Mapping\ErrorExceptionLogsMap.cs" />
     <Compile Include="Mapping\ErrorMap.cs" />
     <Compile Include="Mapping\ItemMap.cs" />
     <Compile Include="Mapping\ItemMatchMap.cs" />

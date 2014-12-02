@@ -29,7 +29,7 @@ namespace SwapStff.Data
         {
             return _entities.AsQueryable();
         }
-
+       
         public TEntity GetById(object id)
         {
             return _entities.Find(id);
@@ -174,8 +174,8 @@ namespace SwapStff.Data
 
         protected virtual void Dispose(bool disposing)
         {
-            if (!this.disposed)
-            {
+            //if (!this.disposed)
+            //{
                 if (disposing)
                 {
                     if (this._context != null)
@@ -183,8 +183,8 @@ namespace SwapStff.Data
                         this._context.Dispose();
                     }
                 }
-            }
-            this.disposed = true;
+            //}
+            //this.disposed = true;
         }
 
         private int GetPrimaryKey(DbEntityEntry entry)

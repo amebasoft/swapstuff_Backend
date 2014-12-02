@@ -2,5 +2,11 @@
     ViewBag.Title = "Welcome";
     Layout = "~/Views/Shared/_LayoutBackEnd.cshtml";
 }
+<!-- For Sorting & Paging -->
+<script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.tablesorter.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.tablesorter.pager.js")" type="text/javascript"></script>
+<script src="~/Scripts/footer.js" type="text/javascript"></script>
 
-<h2>Welcome in SwapStff</h2>
+<h2 class="text-center">Welcome in SwapStff</h2>
+<div class="MyTable"></div>

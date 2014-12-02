@@ -94,6 +94,21 @@ namespace SwapStff
             }
 
             var ex = Server.GetLastError();
+
+            // Code that runs when an unhandled error occurs
+
+            // Get the exception object.
+            Exception exc = Server.GetLastError();
+            //HttpSessionState session = HttpContext.Current.Session;
+
+
+            // Handle HTTP errors
+            if (exc != null)
+            {
+                string ErrorMessage = exc.Message.ToString();
+                ErrorLogging.LogError(exc);
+            }
+
             var controller = new ErrorController();
             var routeData = new RouteData();
             var action = "Index";

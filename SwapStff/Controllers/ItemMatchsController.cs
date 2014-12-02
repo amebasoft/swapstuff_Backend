@@ -98,21 +98,23 @@ namespace SwapStff.Controllers
                                      p.Latitude,
                                      p.Longitude
                                  }).ToList();
-
             var Results = (from m in Chats
                            where m.ProfileIdTo == ItemMatchModel.ProfileIdBy && m.IsRead == false
                            group m by new { m.ItemID, m.ProfileIdBy } into g
-                           select new { ItemID = g.Key.ItemID,
-                                        ProfileIdBy = g.Key.ProfileIdBy,
-                                        ChatContent = (from c in Chats
-                                                       where c.ProfileIdTo == ItemMatchModel.ProfileIdBy && c.IsRead == false
-                                                       orderby c.DateTimeCreated descending
-                                                       select c.ChatContent).FirstOrDefault(),
-                                        ChatDateTime = (from c in Chats
-                                                        where c.ProfileIdTo == ItemMatchModel.ProfileIdBy && c.IsRead == false
-                                                       orderby c.DateTimeCreated descending
-                                                       select c.DateTimeCreated).FirstOrDefault(),
-                                        Count = g.Count() });
+                           select new
+                           {
+                               ItemID = g.Key.ItemID,
+                               ProfileIdBy = g.Key.ProfileIdBy,
+                               ChatContent = (from c in Chats
+                                              where c.ProfileIdTo == ItemMatchModel.ProfileIdBy && c.ItemID == g.Key.ItemID && c.IsRead == false
+                                              orderby c.DateTimeCreated descending
+                                              select c.ChatContent).FirstOrDefault(),
+                               ChatDateTime = (from c in Chats
+                                               where c.ProfileIdTo == ItemMatchModel.ProfileIdBy && c.ItemID == g.Key.ItemID && c.IsRead == false
+                                               orderby c.DateTimeCreated descending
+                                               select c.DateTimeCreated).FirstOrDefault(),
+                               Count = g.Count()
+                           }).ToList();
 
             Int32 DistanceBy = Convert.ToInt32(ProfileService.GetById(ItemMatchModel.ProfileIdBy.ToString()).Distance);
             double LatitudeProfileBy = Convert.ToDouble(ProfileService.GetById(ItemMatchModel.ProfileIdBy.ToString()).Latitude);
@@ -134,7 +136,7 @@ namespace SwapStff.Controllers
                     string _ChatMessage ="";
                     Nullable<int> _MessageCount = 0;
 
-                    var ChatFound = Results.Where(x => x.ProfileIdBy == ItemMatch.ProfileIdBy);
+                    var ChatFound = Results.Where(x => x.ProfileIdBy == ItemMatch.ProfileIdBy && x.ItemID==ItemMatch.ItemID);
 
                     var RecentChatDateTime = (from c in Chats
                                               where c.ProfileIdTo == ItemMatch.ProfileIdBy 
@@ -148,8 +150,8 @@ namespace SwapStff.Controllers
                     if (ChatFound.Count() > 0)
                     {
                         //_DateTimeCreated = Results.Where(x => x.ProfileIdBy == ItemMatch.ProfileIdBy).Select(x => x.ChatDateTime).FirstOrDefault();
-                        _ChatMessage = Results.Where(x => x.ProfileIdBy == ItemMatch.ProfileIdBy).Select(x => x.ChatContent).FirstOrDefault();
-                        _MessageCount = Results.Where(x => x.ProfileIdBy == ItemMatch.ProfileIdBy).Select(x => x.Count).FirstOrDefault();
+                        _ChatMessage = Results.Where(x => x.ProfileIdBy == ItemMatch.ProfileIdBy && x.ItemID == ItemMatch.ItemID).Select(x => x.ChatContent).FirstOrDefault();
+                        _MessageCount = Results.Where(x => x.ProfileIdBy == ItemMatch.ProfileIdBy && x.ItemID == ItemMatch.ItemID).Select(x => x.Count).FirstOrDefault();
                     }
 
                     //models.Add(Mapper.Map<SwapStff.Entity.ItemMatch, SwapStff.Models.ItemMatchModel>(ItemMatch));
@@ -247,6 +249,7 @@ namespace SwapStff.Controllers
             catch (Exception ex)
             {
                 string ErrorMsg = ex.Message.ToString();
+                ErrorLogging.LogError(ex);
                 return Request.CreateResponse(HttpStatusCode.NotImplemented, ItemMatchID.ToString(), Configuration.Formatters.JsonFormatter);
             }
         }
@@ -266,6 +269,7 @@ namespace SwapStff.Controllers
             catch (Exception ex)
             {
                 string ErrorMsg = ex.Message.ToString();
+                ErrorLogging.LogError(ex);
                 return Request.CreateResponse(HttpStatusCode.NotImplemented, "ERROR", Configuration.Formatters.JsonFormatter);
             }
         }

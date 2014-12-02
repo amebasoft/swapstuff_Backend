@@ -1,0 +1,95 @@
+﻿@model SwapStff.Models.UserChatsModel
+
+@{
+    ViewBag.Title = "Chats";
+    Layout = "~/Views/Shared/_LayoutBackEnd.cshtml";
+}
+
+<h2 class="text-center">User Chats</h2>
+
+<div class="MyTable">
+    <h3>Are you sure you want to delete this?</h3>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemTitleBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemTitleBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemImageBy)
+        </dt>
+
+        <dd>
+            <img src="@Model.ItemImageBy" width="150" height="150" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfileIdBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfileIdBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemTitleTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemTitleTo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemImageTo)
+        </dt>
+
+        <dd>
+            <img src="@Model.ItemImageTo" width="150" height="150" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfileIdTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfileIdTo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChatContent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChatContent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTimeCreated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTimeCreated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsRead)
+        </dt>
+
+        <dd>
+            <label id="lblRead" title="@Model.IsRead">@Model.IsRead</label>
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="bigButton" /> |
+            @Html.ActionLink("User Chats", "Index")
+        </div>
+    }
+</div>

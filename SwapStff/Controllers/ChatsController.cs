@@ -271,6 +271,7 @@ namespace SwapStff.Controllers
             catch (Exception ex)
             {
                 string ErrorMsg = ex.Message.ToString();
+                ErrorLogging.LogError(ex);
                 return Request.CreateResponse(HttpStatusCode.NotImplemented, ChatID.ToString(), Configuration.Formatters.JsonFormatter);
             }
         }
@@ -290,6 +291,7 @@ namespace SwapStff.Controllers
             catch (Exception ex)
             {
                 string ErrorMsg = ex.Message.ToString();
+                ErrorLogging.LogError(ex);
                 return Request.CreateResponse(HttpStatusCode.NotImplemented, "ERROR", Configuration.Formatters.JsonFormatter);
             }
         }

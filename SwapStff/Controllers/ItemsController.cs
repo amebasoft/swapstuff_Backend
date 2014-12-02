@@ -129,7 +129,8 @@ namespace SwapStff.Controllers
                 //I will update later after Successfully updation DB
                 ItemModel.ItemImage = "";
                 //End : Set URL for Image to Blank
-               
+
+                bool IsUpdate = false;
 
                 Mapper.CreateMap<SwapStff.Models.ItemModel, SwapStff.Entity.Item>();
                 SwapStff.Entity.Item Item = Mapper.Map<SwapStff.Models.ItemModel, SwapStff.Entity.Item>(ItemModel);
@@ -141,36 +142,45 @@ namespace SwapStff.Controllers
                 {
                     if (ItemModel.DeleteFirst == 1) //1 for true
                     {
+                        //Delete Image from Blob
+                        DeleteImageFromBlob(ItemModel.ItemID.ToString());
+                        //End : Delete the Existing Item
+
                         //Delete the Existing Item
                         var ItemDel = Itemservice.GetById(ItemModel.ItemID.ToString());
                         //Delete Record from DB
                         Itemservice.Delete(ItemDel);
-                        //Delete Image from Blob
-                        DeleteImageFromBlob(ItemModel.ItemID.ToString());
-                        //End : Delete the Existing Item
 
                         //Insert the New item
                         Itemservice.Insert(Item); //Save Operation
                     }
                     else
                     {
+                        //Delete Image from Blob
+                        DeleteImageFromBlob(ItemID.ToString());
+
+                        //Upload New
+                        BlobCloudService objBlob = new BlobCloudService();
+                        string URL = objBlob.UploadBlobImage(uniqueBlobName, imageBytes);
+                        Item.ItemImage = URL.ToString();
+
                         Itemservice.Update(Item); //Update Operation
+                        IsUpdate = true;
                     }
                 }
                 ItemID = Item.ItemID.ToString();
 
-                if (Convert.ToInt32(ItemID) > 0) //Operation Performed on it
+                if ((Convert.ToInt32(ItemID) > 0) && (IsUpdate==false)) //Operation Performed on it
                 {
-                    //Delete Image from Blob
-                    DeleteImageFromBlob(ItemID.ToString());
+
                     BlobCloudService objBlob = new BlobCloudService();
                     string URL = objBlob.UploadBlobImage(uniqueBlobName, imageBytes);
                     
                     //Update the Existing Item URL
-                    var ItemUpdate = Itemservice.GetById(ItemID.ToString());
-                    ItemUpdate.ItemImage = URL;
+                    var itemUpdate = Itemservice.GetById(ItemID.ToString());
+                    itemUpdate.ItemImage = URL;
 
-                    Itemservice.Update(ItemUpdate);
+                    Itemservice.Update(itemUpdate);
                 }
                 
 
@@ -179,6 +189,7 @@ namespace SwapStff.Controllers
             catch(Exception ex)
             {
                 string ErrorMsg = ex.Message.ToString();
+                ErrorLogging.LogError(ex);
                 return Request.CreateResponse(HttpStatusCode.NotImplemented, ItemID.ToString(), Configuration.Formatters.JsonFormatter);
             }
         }
@@ -199,8 +210,9 @@ namespace SwapStff.Controllers
               
                 Status = true;
             }
-            catch
+            catch(Exception ex)
             {
+                ErrorLogging.LogError(ex);
                 Status = false;
             }
             return Status;
@@ -225,6 +237,7 @@ namespace SwapStff.Controllers
             catch(Exception ex)
             {
                 string ErrorMsg = ex.Message.ToString();
+                ErrorLogging.LogError(ex);
                 return Request.CreateResponse(HttpStatusCode.NotImplemented, "ERROR", Configuration.Formatters.JsonFormatter);
             }
         }

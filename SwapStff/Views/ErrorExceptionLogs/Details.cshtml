@@ -1,0 +1,120 @@
+﻿@model SwapStff.Models.ErrorExceptionLogsModel
+
+@{
+    ViewBag.Title = "Error and Exception Logs";
+    Layout = "~/Views/Shared/_LayoutBackEnd.cshtml";
+}
+
+<h2 class="text-center">Error and Exception Logs</h2>
+
+<div class="MyTable">
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EventId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LogDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LogDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Source)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Source)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Message)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QueryString)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QueryString)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TargetSite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TargetSite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StackTrace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StackTrace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserAgent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserAgent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserIP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserIP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserAuthentication)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserAuthentication)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Error and Exception Logs", "Index")
+</p>

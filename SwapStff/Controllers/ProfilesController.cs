@@ -106,6 +106,7 @@ namespace SwapStff.Controllers
             catch(Exception ex)
             {
                 string ErrorMsg = ex.Message.ToString();
+                ErrorLogging.LogError(ex);
                 return Request.CreateResponse(HttpStatusCode.NotImplemented, ProfileID.ToString(), Configuration.Formatters.JsonFormatter);
             }
         }
@@ -140,9 +141,10 @@ namespace SwapStff.Controllers
                 var Item = Itemservice.GetAll().Where(x => x.ProfileID == ProfileId).FirstOrDefault();
                 if (Item != null)
                 {
-                    Itemservice.Delete(Item);
                     //Delete Image from Blob
                     DeleteImageFromBlob(Item.ItemID.ToString());
+
+                    Itemservice.Delete(Item);
                 }
 
                 //Delete from profile, It will delete from Items, Chat & Profiles
@@ -153,6 +155,7 @@ namespace SwapStff.Controllers
             catch(Exception ex)
             {
                 string ErrorMsg = ex.Message.ToString();
+                ErrorLogging.LogError(ex);
                 return Request.CreateResponse(HttpStatusCode.NotImplemented, "ERROR", Configuration.Formatters.JsonFormatter);
             }
         }

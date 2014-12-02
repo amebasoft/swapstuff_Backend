@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -27,11 +28,9 @@ namespace SwapStff.Controllers
         public ActionResult Index()
         {
 
-            var Items = Itemservice.GetAll();
+            var Items = Itemservice.GetItems();
             var models = new List<ItemModel>();
             Mapper.CreateMap<SwapStff.Entity.Item, SwapStff.Models.ItemModel>();
-            //models.Add(Mapper.Map<SwapStff.Entity.Item, SwapStff.Models.ItemModel>(Items));
-
             foreach (var Item in Items)
             {
                 models.Add(Mapper.Map<SwapStff.Entity.Item, SwapStff.Models.ItemModel>(Item));
@@ -97,26 +96,69 @@ namespace SwapStff.Controllers
 
         //
         // GET: /UserItems/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int ItemID)
         {
-            return View();
+            if (ItemID <= 0)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var item = Itemservice.GetItems().Where(x => x.ItemID==ItemID).FirstOrDefault();
+            Mapper.CreateMap<SwapStff.Entity.Item, SwapStff.Models.ItemModel>();
+            SwapStff.Models.ItemModel itemModel = Mapper.Map<SwapStff.Entity.Item, SwapStff.Models.ItemModel>(item);
+
+            if (itemModel == null)
+            {
+                return HttpNotFound();
+            }
+            return View(itemModel);
         }
 
         //
         // POST: /UserItems/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int ItemId)
         {
             try
             {
-                // TODO: Add delete logic here
+                //Delete Image from Blob
+                DeleteImageFromBlob(ItemId.ToString());
 
+                var Item = Itemservice.GetItems().Where(x => x.ItemID == ItemId).FirstOrDefault();
+                Itemservice.Delete(Item);
+                
                 return RedirectToAction("Index");
             }
-            catch
+            catch(Exception ex)
             {
+                ErrorLogging.LogError(ex);
                 return View();
             }
+        }
+        public Boolean DeleteImageFromBlob(string ItemID)
+        {
+            Boolean Status = false;
+            try
+            {
+                //Delete the Existing Item
+                var ItemDel = Itemservice.GetItems().Where(x => x.ItemID == Convert.ToInt32(ItemID)).FirstOrDefault();
+
+                if (ItemDel.ItemImage != "")
+                {
+                    //Delete Image from Blob
+                    BlobCloudService objBlob = new BlobCloudService();
+                    objBlob.DeleteImageFromBlob(ItemDel.ItemImage);
+                }
+
+                Status = true;
+            }
+            catch(Exception ex)
+            {
+                ErrorLogging.LogError(ex);
+                Status = false;
+            }
+            return Status;
         }
     }
 }

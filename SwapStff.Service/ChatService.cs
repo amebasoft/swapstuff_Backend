@@ -45,6 +45,36 @@ namespace SwapStff.Service
             return GetAll().Find(l => l.ChatId.ToString() == id);
         }
 
+        public List<Chat> GetChats()
+        {
+            var Chats = _ChatRepository.GetBy(x => new
+            {
+                x.ChatId,
+                x.ItemID,
+                x.ProfileIdBy,
+                x.ProfileIdTo,
+                x.ChatContent,
+                x.DateTimeCreated,
+                x.IsRead
+            }, x => x.ChatId != -1);
+
+            var chatList = new List<Chat>();
+            foreach (var item in Chats)
+            {
+                chatList.Add(new Chat
+                {
+                    ChatId=item.ChatId,
+                    ItemID=item.ItemID,
+                    ProfileIdBy=item.ProfileIdBy,
+                    ProfileIdTo=item.ProfileIdTo,
+                    ChatContent=item.ChatContent,
+                    DateTimeCreated=item.DateTimeCreated,
+                    IsRead=item.IsRead
+                });
+            }
+            return chatList;
+        }
+
         public void Insert(Chat model)
         {
             if (model == null)

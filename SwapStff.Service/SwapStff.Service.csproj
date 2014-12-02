@@ -64,12 +64,16 @@
     <Compile Include="IChatService.cs" />
     <Compile Include="IItemMatchService.cs" />
     <Compile Include="IItemService.cs" />
+    <Compile Include="IAppSettingService.cs" />
+    <Compile Include="IErrorExceptionLogsService.cs" />
     <Compile Include="IUserService.cs" />
     <Compile Include="IProfileService.cs" />
     <Compile Include="ILoggerService.cs" />
     <Compile Include="ItemMatchService.cs" />
     <Compile Include="ChatService.cs" />
     <Compile Include="ItemService.cs" />
+    <Compile Include="AppSettingService.cs" />
+    <Compile Include="ErrorExceptionLogsService.cs" />
     <Compile Include="UserService.cs" />
     <Compile Include="ProfileService.cs" />
     <Compile Include="LoggerService.cs" />

@@ -46,6 +46,17 @@ namespace SwapStff.Service
             //return _ItemRepository.GetById(id);
             return GetAll().Find(l => l.ItemID.ToString() == id);
         }
+        public List<Item> GetItems()
+        {
+            var Items = _ItemRepository.GetBy(x => new { x.ItemID, x.ProfileID, x.ItemTitle, x.ItemDescription, x.ItemImage ,x.ItemDateTimeCreated, x.IsActive }, x => x.ItemID != -1);
+
+            var itemList = new List<Item>();
+            foreach (var item in Items)
+            {
+                itemList.Add(new Item { ItemID = item.ItemID, ProfileID = item.ProfileID, ItemTitle = item.ItemTitle, ItemDescription = item.ItemDescription, ItemImage = item.ItemImage, ItemDateTimeCreated = item.ItemDateTimeCreated, IsActive = item.IsActive });
+            }
+            return itemList;
+        }
 
         public List<Item> GetItemsWOImage()
         {

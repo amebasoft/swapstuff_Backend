@@ -44,7 +44,35 @@ namespace SwapStff.Service
         {
             return GetAll().Find(l => l.ItemMatchID.ToString() == id);
         }
+        public List<ItemMatch> GetItemMatchs()
+        {
+            var Profiles = _ItemMatchRepository.GetBy(x => new
+            {
+                x.ItemMatchID,
+                x.ItemID,
+                x.ProfileIdBy,
+                x.Distance,
+                x.IsLikeDislikeAbuseBy,
+                x.DateTimeCreated,
+                x.AbuseMessage
+            }, x => x.ItemMatchID != -1);
 
+            var itemMatchList = new List<ItemMatch>();
+            foreach (var item in Profiles)
+            {
+                itemMatchList.Add(new ItemMatch
+                {
+                    ItemMatchID=item.ItemMatchID,
+                    ItemID=item.ItemID,
+                    ProfileIdBy=item.ProfileIdBy,
+                    Distance=item.Distance,
+                    IsLikeDislikeAbuseBy=item.IsLikeDislikeAbuseBy,
+                    DateTimeCreated=item.DateTimeCreated,
+                    AbuseMessage=item.AbuseMessage
+                });
+            }
+            return itemMatchList;
+        }
         public void Insert(ItemMatch model)
         {
             if (model == null)

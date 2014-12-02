@@ -10,6 +10,7 @@ namespace SwapStff.Service
     {
         List<User> GetAll();
         User GetById(string id);
+        List<User> GetUsers();
         void Insert(User model);
         void Update(User model);
         void Delete(User model);

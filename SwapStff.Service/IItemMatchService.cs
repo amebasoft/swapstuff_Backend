@@ -10,6 +10,7 @@ namespace SwapStff.Service
     {
         List<ItemMatch> GetAll();
         ItemMatch GetById(string id);
+        List<ItemMatch> GetItemMatchs();
         void Insert(ItemMatch model);
         void Update(ItemMatch model);
         void Delete(ItemMatch model);

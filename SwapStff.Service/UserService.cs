@@ -47,6 +47,38 @@ namespace SwapStff.Service
             return GetAll().Find(l => l.UserID.ToString() == id);
         }
 
+        public List<User> GetUsers()
+        {
+            var Users = _UserRepository.GetBy(x => new
+            {
+                x.UserID,
+                x.UserName,
+                x.EmailID,
+                x.Password,
+                x.ParentID,
+                x.CreatedOn,
+                x.LastUpdatedOn,
+                x.IsActive
+            }, x => x.UserID != -1);
+
+            var userList = new List<User>();
+            foreach (var item in Users)
+            {
+                userList.Add(new User
+                {
+                    UserID=item.UserID,
+                    UserName = item.UserName,
+                    EmailID=item.EmailID,
+                    Password=item.Password,
+                    ParentID=item.ParentID,
+                    CreatedOn=item.CreatedOn,
+                    LastUpdatedOn=item.LastUpdatedOn,
+                    IsActive=item.IsActive
+                });
+            }
+            return userList;
+        }
+
         public void Insert(User model)
         {
             if (model == null)

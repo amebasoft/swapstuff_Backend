@@ -10,6 +10,7 @@ namespace SwapStff.Service
     {
         List<Item> GetAll();
         Item GetById(string id);
+        List<Item> GetItems();
         List<Item> GetItemsWOImage();
         void Insert(Item model);
         void Update(Item model);

@@ -36,15 +36,33 @@ namespace SwapStff.Service
         {
             //return _cacheManager.Get(PROFILES_ALL_KEY, () =>
             //{
-               
+            //    return _ProfileRepository.GetAll().ToList();
             //});
+
             return _ProfileRepository.GetAll().ToList();
         }
 
         public Profile GetById(string id)
         {
-
             return GetAll().Find(l => l.ProfileId.ToString() == id);
+        }
+
+        public List<Profile> GetProfiles()
+        {
+            var Profiles = _ProfileRepository.GetBy(x => new { x.ProfileId, x.Username, x.Latitude, x.Longitude, x.DateTimeCreated, 
+                x.Distance, x.GCM_RegistrationID, x.ItemMatchNotification, x.ChatNotification }, x => x.ProfileId != -1);
+
+            var profileList = new List<Profile>();
+            foreach (var item in Profiles)
+            {
+                profileList.Add(new Profile { ProfileId = item.ProfileId, Username = item.Username, Latitude = item.Latitude, Longitude = item.Longitude,
+                                              DateTimeCreated = item.DateTimeCreated,
+                                              Distance = item.Distance,
+                                              GCM_RegistrationID = item.GCM_RegistrationID, ItemMatchNotification=item.ItemMatchNotification,
+                                              ChatNotification=item.ChatNotification
+                });
+            }
+            return profileList;
         }
 
         public void Insert(Profile model)
@@ -53,7 +71,6 @@ namespace SwapStff.Service
             {
                 throw new ArgumentNullException("Profile");
             }
-            
             
             List<Profile> Profiles = GetAll();
             Profiles.Add(model);

@@ -10,6 +10,7 @@ namespace SwapStff.Service
     {
         List<Profile> GetAll();
         Profile GetById(string id);
+        List<Profile> GetProfiles();
         void Insert(Profile model);
         void Update(Profile model);
         void Delete(Profile model);

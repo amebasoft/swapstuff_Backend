@@ -10,6 +10,7 @@ namespace SwapStff.Service
     {
         List<Chat> GetAll();
         Chat GetById(string id);
+        List<Chat> GetChats();
         void Insert(Chat model);
         void Update(Chat model);
         void Delete(Chat model);

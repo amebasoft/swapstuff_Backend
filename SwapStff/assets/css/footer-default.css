@@ -9,6 +9,15 @@
 	z-index:101;
     margin-top:5px;
 }
+
+/*#footer {
+	color:#777;
+	background-color:#2B2B2B;
+	border-top:#252525 5px solid;
+	bottom:0;
+    position:absolute;
+    width:100%;
+}*/
 #footer.bottom {
 	position:absolute;
 	left:0; right:0;

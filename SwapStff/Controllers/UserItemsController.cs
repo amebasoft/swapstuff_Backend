@@ -125,7 +125,7 @@ namespace SwapStff.Controllers
                 //Delete Image from Blob
                 DeleteImageFromBlob(ItemId.ToString());
 
-                var Item = Itemservice.GetItems().Where(x => x.ItemID == ItemId).FirstOrDefault();
+                var Item = Itemservice.GetAll().Where(x => x.ItemID == ItemId).FirstOrDefault();
                 Itemservice.Delete(Item);
                 
                 return RedirectToAction("Index");

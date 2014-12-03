@@ -137,26 +137,26 @@ namespace SwapStff.Controllers
         {
             try
             {
-                var ChatBy = ChatService.GetChats().Where(x => x.ProfileIdBy == ProfileId).FirstOrDefault();
+                var ChatBy = ChatService.GetAll().Where(x => x.ProfileIdBy == ProfileId).FirstOrDefault();
                 if (ChatBy != null)
                 {
                     ChatService.Delete(ChatBy);
                 }
 
-                var ChatTo = ChatService.GetChats().Where(x => x.ProfileIdTo == ProfileId).FirstOrDefault();
+                var ChatTo = ChatService.GetAll().Where(x => x.ProfileIdTo == ProfileId).FirstOrDefault();
                 if (ChatTo != null)
                 {
                     ChatService.Delete(ChatTo);
                 }
 
                 //Delete from Item Matches
-                var ItemMatch = ItemMatchService.GetItemMatchs().Where(x => x.ProfileIdBy == ProfileId).FirstOrDefault();
+                var ItemMatch = ItemMatchService.GetAll().Where(x => x.ProfileIdBy == ProfileId).FirstOrDefault();
                 if (ItemMatch != null)
                 {
                     ItemMatchService.Delete(ItemMatch);
                 }
 
-                var Item = Itemservice.GetItems().Where(x => x.ProfileID == ProfileId).FirstOrDefault();
+                var Item = Itemservice.GetAll().Where(x => x.ProfileID == ProfileId).FirstOrDefault();
                 if (Item != null)
                 {
                     //Delete Image from Blob
@@ -166,7 +166,7 @@ namespace SwapStff.Controllers
                 }
 
                 //Delete from profile
-                var profile = ProfileService.GetProfiles().Where(x => x.ProfileId == ProfileId).FirstOrDefault();
+                var profile = ProfileService.GetAll().Where(x => x.ProfileId == ProfileId).FirstOrDefault();
                 ProfileService.Delete(profile);
 
                 return RedirectToAction("Index");

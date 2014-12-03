@@ -135,7 +135,7 @@ namespace SwapStff.Controllers
         {
             try
             {
-                var chat = ChatService.GetChats().Where(x => x.ChatId == ChatId).FirstOrDefault();
+                var chat = ChatService.GetAll().Where(x => x.ChatId == ChatId).FirstOrDefault();
                 ChatService.Delete(chat);
 
                 return RedirectToAction("Index");

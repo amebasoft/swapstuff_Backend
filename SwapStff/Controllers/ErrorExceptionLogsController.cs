@@ -130,7 +130,7 @@ namespace SwapStff.Controllers
         {
             try
             {
-                var error = ErrorExceptionLogService.GetErrorExceptionLogs().Where(x => x.EventId == id).FirstOrDefault();
+                var error = ErrorExceptionLogService.GetAll().Where(x => x.EventId == id).FirstOrDefault();
                 ErrorExceptionLogService.Delete(error);
 
                 return RedirectToAction("Index");

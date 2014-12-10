@@ -1,0 +1,58 @@
+﻿@model SwapStff.Models.AppSettingModel
+
+@{
+    ViewBag.Title = "App Settings";
+    Layout = "~/Views/Shared/_LayoutBackEnd.cshtml";
+}
+<script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+<h2 class="text-center">App Settings</h2>
+@{ string Message =(Model.Message==null ? "" : Model.Message.ToString());}
+<script type="text/javascript">
+
+    $(document).ready(function(){ 
+        var message ='@Message';
+        if(message=='Success')
+        {
+            $('<div class="alert alert-success"><strong>Success!</strong> Settings saved Successfully</div> ').insertBefore('#btnSubmit').delay(3000).fadeOut(function () {
+                $(this).remove();
+            });
+        }
+        if(message=='Error')
+        {
+            $('<div class="alert alert-danger"><strong>Error!</strong> Some Problem Occured while saving.</div>').insertBefore('#btnSubmit').delay(3000).fadeOut(function () {
+                $(this).remove();
+            });
+        }
+    });
+
+</script>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal height-500">
+        @Html.ValidationSummary(true)
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.SettingID, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SettingID)
+                @Html.ValidationMessageFor(model => model.SettingID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MaxDistance, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MaxDistance)
+                @Html.ValidationMessageFor(model => model.MaxDistance)
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input id="btnSubmit" type="submit" value="Save" class="bigButton" />
+            </div>
+        </div>
+    </div>
+}
+

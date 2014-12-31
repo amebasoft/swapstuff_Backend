@@ -25,13 +25,15 @@ namespace SwapStff.Controllers
     public class ChatsController : ApiController
     {
         public IProfileService ProfileService { get; set; }
+        public IItemMatchService ItemMatchService { get; set; }
         public IChatService ChatService { get; set; }
         public IItemService Itemservice { get; set; }
-        public ChatsController(IProfileService ProfileService, IChatService ChatService, IItemService Itemservice)
+        public ChatsController(IProfileService ProfileService, IChatService ChatService, IItemService Itemservice,IItemMatchService ItemMatchService)
         {
             this.ProfileService = ProfileService;
             this.ChatService = ChatService;
             this.Itemservice = Itemservice;
+            this.ItemMatchService = ItemMatchService;
         }
 
         // GET api/Chats
@@ -233,8 +235,11 @@ namespace SwapStff.Controllers
                                        }).ToList();
 
                         var models = new List<ChatModel>();
+                        var IsLikeDislikeAbuseBy = ItemMatchService.GetAll().Where(x => x.ItemID == ChatModel.ItemID && x.ProfileIdBy == ChatModel.ProfileIdBy).Select(x => x.IsLikeDislikeAbuseBy).FirstOrDefault();
+                        var IsLikeDislikeAbuseTo = ItemMatchService.GetAll().Where(x => x.ItemID == ItemIDTo && x.ProfileIdBy == ChatModel.ProfileIdTo).Select(x => x.IsLikeDislikeAbuseBy).FirstOrDefault();
+                        
                         var ChatMessage = "";
-                        if (Results.Count() > 0)
+                        if ((Results.Count() > 0) && (IsLikeDislikeAbuseBy == IsLikeDislikeAbuseTo))
                         {
                             //Message Send as Json Style
 
